@@ -27,7 +27,7 @@ log_odds_coefficients = {
     "Age at Baseline": 0.0056,
     "Sex (Male)": -2.2452,
     "Follow-up Interval": 0.3507
-}
+} 
 
 # Function to calculate the risk and contributions
 def calculate_risk(inputs):
