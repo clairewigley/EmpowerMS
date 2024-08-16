@@ -4,13 +4,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Set page configuration for better aesthetics
-st.set_page_config(page_title="EmpowerMS: Risk Reduction Tool", layout="wide")
+st.set_page_config(page_title="Never too Late to Quit", layout="wide")
 
 # Title and description
-st.title("EmpowerMS: Risk Reduction Tool for Black Persons with MS")
+st.title("Risk Reduction after Smoking Cessation in Black Persons with MS")
 st.markdown("""
-This tool is designed to help Black persons with multiple sclerosis (BpwMS) understand their risk of disease progression and how lifestyle changes, such as smoking cessation, can significantly reduce that risk. 
-By empowering you with this knowledge, we hope to support you in making informed decisions about your health.
+This tool is designed to visualize our cohort's potential risk reduction if BpwMS quit smoking. 
 """)
 
 # Sidebar for user inputs
@@ -57,10 +56,10 @@ def calculate_smoking_cessation_benefit(inputs):
     return relative_risk_reduction * 100, current_risk * 100, risk_no_smoking * 100
 
 # Collecting user inputs
-bpwms = st.sidebar.selectbox("BpwMS", options=[1, 0], format_func=lambda x: "Yes" if x == 1 else "No", index=0)
+bpwms = st.sidebar.selectbox("Race", options=[1, 0], format_func=lambda x: "Black" if x == 1 else "White", index=0)
 current_smoker = st.sidebar.selectbox("Current Smoker", options=[1, 0], format_func=lambda x: "Yes" if x == 1 else "No", index=0)
-pack_years = st.sidebar.number_input("Pack-Years", min_value=0.0, step=0.1, value=2.5)
-age_at_baseline = st.sidebar.number_input("Age at Baseline", min_value=0, step=1, value=30)
+pack_years = st.sidebar.number_input("Pack-Years", min_value=0.0, step=0.1, value=5.0)
+age_at_baseline = st.sidebar.number_input("Age at Baseline", min_value=0, step=1, value=40)
 sex_male = st.sidebar.selectbox("Sex", options=[0, 1], format_func=lambda x: "Male" if x == 1 else "Female")
 follow_up_interval = st.sidebar.number_input("Follow-up Interval", min_value=0.0, step=0.1, value=1.0)
 
