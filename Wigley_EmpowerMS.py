@@ -103,4 +103,3 @@ else:
         ax.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
         ax.set_title('Relative Risk Reduction from Smoking Cessation')
         st.pyplot(fig)
-
