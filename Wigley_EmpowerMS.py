@@ -95,7 +95,7 @@ else:
         
         # Plotting the relative risk reduction as a pie chart
         fig, ax = plt.subplots(figsize=(6, 6))
-        labels = ['Remaining Risk After Quitting', 'Risk Reduction']
+        labels = ['Remaining Risk', 'Risk Reduction\nAfter Quitting']
         sizes = [100 - relative_risk_reduction, relative_risk_reduction]
         colors = ['orange', 'lightgreen']
         explode = (0, 0.1)  # Explode the risk reduction slice
